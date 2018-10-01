@@ -1,4 +1,4 @@
-# Inicio
+# Criando um projeto
 
 Se você está lendo esse arquivo, provavelmente decidiu aprender um pouco sobre GCP (Google Cloud Plataform) e veio ao local certo. Apesar de desde já recomendarmos a leitura da documentacão oficial ,que é muito boa, vamos tentar te mostrar como cada coisa funciona na pratica. 
 
@@ -24,6 +24,35 @@ O GCP te da um valor de bonus, nesse momento 300$, e tambem te oferece o free ti
 
 Com a sua conta já criada vamos dar uma olhada na tela de criacão de projeto.
 
-![New Project Screen](01 - Criando um Projeto/img/new-project.png)
+![New Project Screen](./img/new-project.png)
 
 Nessa página já temos algumas coisas que requerem um pouco de atencão:
+
+### Nome do Projeto
+
+Esse nome e basicamente um apelido. E pode ser alterado a qualquer momento.
+
+### Codigo do projeto
+
+Esse e realmente o identificador unico do projeto.
+No nosso caso conseguimos utilizar o mesmo nome do projeto, mas isso nao e uma regra. 
+Esse codigo nao pode ser alterado e sera utilizado na hora configurar o SDK.
+
+### Organizacao
+
+TODO
+
+### Proximos passos
+
+Apos clicar em criar, vai levar alguns segundos (talvez minutos) para que o projeto fique disponivel pra voce.
+
+Aguarde um pouco...
+
+Um pouco mais...
+
+Ok, ja deve ter finaliado...
+
+Agora podemos seguir!
+
+Vamos conhecer o gcloud sdk e daqui pra frente tentaremos sempre fazer das 2 formas.
+Tanto pela UI quanto pela linha de comando.
