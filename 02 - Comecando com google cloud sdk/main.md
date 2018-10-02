@@ -55,3 +55,25 @@ Caso voce nao queira ler agora, basta digital `gcloud projects create $id_unico`
 
 ![gcloud projects create](./img/new-project.png)
 
+Nao vamos precisar desse projeto, pois ja criamos o nosso anteriormente.
+Entao vamos aproveitar para aprender a deletar um projeto.
+
+Supondo que a gente nao saiba o id do projeto, nem quais projetos existem podemos simplesmente rodar o comando `gcloud projects list`
+
+![gcloud projects list](./img/gcloud-projects-list.png)
+
+Agora que sabemos os projetos existentes podemos deletar com `gcloud projects delete $id_unico`
+
+![gcloud projects delete](./img/gcloud-projects-delete.png)
+
+Se voce ler com atencao a saida do comando vai aprender mais um novo comando:
+
+`gcloud projects undelete $id_unico`
+
+Por padrao a GCP nao deleta instanteneamente seu projeto, ele joga o projeto em uma especie de quarentena que dura em torno de 30 dias. Quando esse prazo vai chegando ao final, eles enviam um email para voce falando que seu projeto sera deletado em breve.
+
+Ate esse dia voce pode desfazer o comando de delete e recuperar o projeto.
+
+Vale a pena mencionar que voce recebera um email, assim que mandar deletar o projeto, avisando que foi agendado a delecao do projeto.
+
+![email delecao do projeto](./img/delecao-do-projeto.png)
