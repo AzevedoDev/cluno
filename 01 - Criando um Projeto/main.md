@@ -35,7 +35,7 @@ Esse nome e basicamente um apelido. E pode ser alterado a qualquer momento.
 ### Codigo do projeto
 
 Esse e realmente o identificador unico do projeto.
-No nosso caso conseguimos utilizar o mesmo nome do projeto, mas isso nao e uma regra. 
+O google cloud vai tentar cadastrar o nome mas parecido possivel com seu projeto, no nosso caso conseguimos utilizar o mesmo nome do projeto, mas isso nao e uma regra. 
 Esse codigo nao pode ser alterado e sera utilizado na hora configurar o SDK.
 
 ### Organizacao

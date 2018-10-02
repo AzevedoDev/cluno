@@ -54,3 +54,4 @@ De uma lida em como o comando funciona e todos os parametros.
 Caso voce nao queira ler agora, basta digital `gcloud projects create $id_unico`, trocando $id_unico para o id do seu projeto. 
 
 ![gcloud projects create](./img/new-project.png)
+
