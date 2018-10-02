@@ -77,3 +77,4 @@ Ate esse dia voce pode desfazer o comando de delete e recuperar o projeto.
 Vale a pena mencionar que voce recebera um email, assim que mandar deletar o projeto, avisando que foi agendado a delecao do projeto.
 
 ![email delecao do projeto](./img/delecao-do-projeto.png)
+
