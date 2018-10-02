@@ -28,7 +28,7 @@ O objetivo inicial é mostrar desde conceitos importantes no uso de cloud, passa
 15. Automatizacão de servicos com Jenkins.
 
 ### To do
-- [ ] Criar um projeto
+- [x] Criar um projeto
 - [ ] Deploy de site estatico 
 - [ ] Criando um dominio e apontando para nosso site
 - [ ] Fazendo deploy da nossa primeira loja virtual.
