@@ -1,4 +1,4 @@
-# Cluno - Cloud for Bruno
+# Cluno
 
 ## O que é?
 Cluno é um curso open source focado na utilizacão da Google Cloud Plataform. Criaremos uma empresa que tem o foco em distribuir pequenos ecommerces para pessoas que vão se casar mas preferem ficar com o valor dos presentes para comprar algo que realmente precisam.
