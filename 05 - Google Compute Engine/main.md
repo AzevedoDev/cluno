@@ -44,15 +44,25 @@ Para resolver e bem simples, basta removermos o _ do nome.
 !(gloud compute instances create myinstancename)[./img/gcloud-compute-instances-create-vmname-success.png]
 
 
-Nossa primeira instancia esta criada.
+Nossa primeira instancia esta criada, mas ainda existem muitos parametros que precisamos estudar sobre esse comando.
 
-Recomendo que voce tente fazer o mesmo pela interface grafica pro caso de precisar :)
+Por enquanto vamos ficar por aqui e mais pra frente eu volto e escrevo mais sobre o comando e suas peculiaridades.
+Quem sabe rola um PR seu explicando melhor :)
 
 ### Stop
 
+`gcloud compute instances stop myinstancevm`
+
+![gcloud compute instances stop vmname](./img/gcloud-compute-instances-stop-vmname.png)
+
 ### Start
 
-### Restart
+`gcloud compute instances start myinstancevm`
+
+![gcloud compute instances start vmname](./img/gcloud-compute-instances-start-vmname.png)
 
 ### Delete
 
+`gcloud compute instances delete myinstancevm`
+
+![gcloud compute instances delete myinstancevm](./img/gcloud-compute-instances-delete-vmname.png)
