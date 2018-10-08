@@ -13,7 +13,8 @@ O objetivo inicial é mostrar desde conceitos importantes no uso de cloud, passa
 
 1. Criando um Projeto
 1. Comecando com o google cloud sdk
-1. Identidade e controle de acessos (IAM) 
+1. Identidade e controle de acessos (IAM)
+1. Conhecendo as nossas opcoes computacionais. 
 1. Deployando meu primeiro site na GCP  
 1. Entendendo um pouco sobre DNS
 1. Criando nosso dominio principal.

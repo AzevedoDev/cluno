@@ -78,3 +78,7 @@ Vale a pena mencionar que voce recebera um email, assim que mandar deletar o pro
 
 ![email delecao do projeto](./img/delecao-do-projeto.png)
 
+
+# Links uteis
+- https://cloud.google.com/sdk/gcloud/reference/
+
