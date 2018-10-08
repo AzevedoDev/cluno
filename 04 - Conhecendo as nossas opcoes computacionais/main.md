@@ -65,3 +65,7 @@ Elas costumam ser baratas se utilizadas da forma correta, mas sempre vale a pena
 Antes de sair codando qualquer coisa, entenda as necessidades do projeto. Nao so da parte da aplicacao como tambem da infraestrutura (espero eu que voce esteja codando sua infra). 
 Nao jogue dinheiro fora, a facilidade de utilizar servicos nao deve ser desculpa para voce nao trabalhar com arquiteto.
 
+
+## Links
+
+- https://cloudplatform.googleblog.com/2017/07/choosing-the-right-compute-option-in-GCP-a-decision-tree.html
