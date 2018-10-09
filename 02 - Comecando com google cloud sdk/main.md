@@ -41,7 +41,7 @@ Verifique se as opções abaixo estão selecionadas:
  * Run 'gcloud init' (Executar 'gcloud init')
  * O instalador abre uma janela de terminal e executa o comando gcloud init.
 
-Dica de solução de problemas: caso sua instalação não tenha sucesso devido a uma falha de reconhecimento do comando find, verifique se a variável de ambiente PATH está configurada para incluir a pasta que contém find. Normalmente, é a C:\WINDOWS\system32;.
+Dica de solução de problemas: caso sua instalação não tenha sucesso devido a uma falha de reconhecimento do comando find, verifique se a variável de ambiente PATH está configurada para incluir a pasta que contém find. Normalmente, é a ```C:\WINDOWS\system32```;.
 
 
 ## Linux
@@ -54,17 +54,22 @@ Verifique se o sistema operacional é um dos seguintes itens:
  
  Em seguida, realize as seguintes etapas:
 
- ```
-# Criar variável de ambiente para distribuição correta
+* Criar variável de ambiente para distribuição correta
+```
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+```
 
-# Adicione o URI de distribuição do Cloud SDK como uma fonte de pacote
+* Adicione o URI de distribuição do Cloud SDK como uma fonte de pacote
+```
 echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-# Importar a chave pública do Google Cloud Platform
+```
+* Importar a chave pública do Google Cloud Platform
+```
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+```
 
-# Atualize a lista de pacotes e instale o Cloud SDK
+* Atualize a lista de pacotes e instale o Cloud SDK
+```
 sudo apt-get update && sudo apt-get install google-cloud-sdk
 ```
 
