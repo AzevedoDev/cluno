@@ -12,8 +12,6 @@ brew tap caskroom/cask
 brew cask install google-cloud-sdk
 ```
 
-git config --global http.proxy 10.172.163.10:64230
-
 Para validar se o gcloud foi instalado com sucesso execute o seguinte comando:
 
 ```
@@ -26,6 +24,8 @@ Ele deve te retornar algo como:
 
 
 ## Windows 
+
+Certifique-se que o Python está instalado na sua máquina corretamente.
 
 Faça o download do [Instalador do Google Cloud SDK](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe).
 
