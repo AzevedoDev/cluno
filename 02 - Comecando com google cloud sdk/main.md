@@ -27,7 +27,7 @@ Ele deve te retornar algo como:
 
 ## Windows 
 
-Faça o download do ![Instalador do Google Cloud SDK](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe).
+Faça o download do [Instalador do Google Cloud SDK](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe).
 
 Inicie o instalador e siga as instruções.
 
@@ -41,7 +41,7 @@ Verifique se as opções abaixo estão selecionadas:
  * Run 'gcloud init' (Executar 'gcloud init')
  * O instalador abre uma janela de terminal e executa o comando gcloud init.
 
-Dica de solução de problemas: caso sua instalação não tenha sucesso devido a uma falha de reconhecimento do comando find, verifique se a variável de ambiente PATH está configurada para incluir a pasta que contém find. Normalmente, é a ```C:\WINDOWS\system32```;.
+Dica de solução de problemas: caso sua instalação não tenha sucesso devido a uma falha de reconhecimento do comando find, verifique se a variável de ambiente PATH está configurada para incluir a pasta que contém find. Normalmente, é a `C:\WINDOWS\system32`;.
 
 
 ## Linux
@@ -72,6 +72,8 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 ```
 sudo apt-get update && sudo apt-get install google-cloud-sdk
 ```
+
+###
 
 
 ### Configurando o gcloud
