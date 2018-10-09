@@ -2,9 +2,11 @@
 
 ### Instalando
 
+
+### MacOS
 [Clique aqui](https://cloud.google.com/sdk/docs/quickstarts) e descubra como instalar no seu SO!
 
-Caso voce esteja utilizando um MacOS e utilizando o brew:
+Vamos utilizar o brew:
 
 ```
 brew tap caskroom/cask
@@ -20,6 +22,51 @@ gcloud --version
 Ele deve te retornar algo como:
 
 ![gcloud --version](./img/gcloud-version.png)
+
+
+## Windows 
+
+Faça o download do Instalador do Google Cloud SDK.
+
+Inicie o instalador e siga as instruções.
+
+Depois que a instalação for concluída, o instalador apresenta várias opções:
+
+![gcloud windows-install](./img/windows-installer-prompt.png)
+
+Verifique se as opções abaixo estão selecionadas:
+
+ * Start Google Cloud SDK Shell (Iniciar Shell do Google Cloud SDK)
+ * Run 'gcloud init' (Executar 'gcloud init')
+ * O instalador abre uma janela de terminal e executa o comando gcloud init.
+
+Dica de solução de problemas: caso sua instalação não tenha sucesso devido a uma falha de reconhecimento do comando find, verifique se a variável de ambiente PATH está configurada para incluir a pasta que contém find. Normalmente, é a C:\WINDOWS\system32;.
+
+
+## Linux
+
+Antes de começar
+Verifique se o sistema operacional é um dos seguintes itens:
+
+ * uma versão do Ubuntu que não atingiu o fim da vida útil
+ * uma versão estável do Debian a partir da Wheezy
+ 
+ Em seguida, realize as seguintes etapas:
+
+ ```
+# Criar variável de ambiente para distribuição correta
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+
+# Adicione o URI de distribuição do Cloud SDK como uma fonte de pacote
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+# Importar a chave pública do Google Cloud Platform
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+# Atualize a lista de pacotes e instale o Cloud SDK
+sudo apt-get update && sudo apt-get install google-cloud-sdk
+```
+
 
 ### Configurando o gcloud
 
