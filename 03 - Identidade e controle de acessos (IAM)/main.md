@@ -1,52 +1,52 @@
-# IAM - Identity and Access Management (vulgo quem pode acessar oq)
+# IAM - Identity and Access Management (vulgo quem pode acessar oque)
 
-A nao ser que voce tenha um time muito maduro e trabalhe numa empresa que abraca o caos todos os dias pela manha, voce (na verdade seu gestor) vai se preocupar bastante com o fato de quem tem permissao para criar, acessar e usar determinados servicos ou projetos.
+A não ser que você tenha um time muito maduro e trabalhe numa empresa que abraça o caos todos os dias pela manha, você (na verdade seu gestor) vai se preocupar bastante com o fato de quem tem permissão para criar, acessar e usar determinados serviços ou projetos.
 
 ![who-can-which](./img/who-can-which.png)
 
-Uma dica e utilize sempre o principio do menor privilegio possivel. 
+Uma dica e utilize sempre o principio do menor privilegio possível. 
 O que isso quer dizer?
-Se voce precisar criar um usuario com permissao para VER algo, busque uma maneira dele ter APENAS a possibilidade de VER. Nao libere acesso de ADMIN para essa pessoa, pois isso pode acarretar em diversos problemas. (Se quiser que explique com mais detalhes abre uma issue ai que eu detalho melhor!)
+Se você precisar criar um usuário com permissão para VER algo, busque uma maneira dele ter APENAS a possibilidade de VER. Não libere acesso de ADMIN para essa pessoa, pois isso pode acarretar em diversos problemas. (Se quiser que explique com mais detalhes abre uma issue ai que eu detalho melhor!)
 
 
-O google separa os usuarios em 2 grupos principais.
+O Google separa os usuários em dois grupos principais.
 
 * Pessoas
   * Conta do Google
-  * Grupo do google
+  * Grupo do Google
   * Dominio do G Suite
   * Cloud Identity Domain
-    * E um tipo de dominio da organizacao e nao necessariamente um dominio do Google.
-* Conta de servico
+    * E um tipo de domínio da organização e não necessariamente um domínio do Google.
+* Conta de serviço
 
 
-## Conta de Servico
+## Conta de Serviço
 
-Esse tipo de conta e extremamente indicado para, pasme, servicos. Se voce tem um servico de backup por exemplo, crie um usuario de servico e utilize ele para que a aplicacao se conecte ao outro servico.
+Esse tipo de conta e extremamente indicado para, pasme, serviços. Se você tem um serviço de backup por exemplo, crie um usuário de serviço e utilize ele para que a aplicação se conecte ao outro serviço.
 
-"A mais eu uso a minha propria conta e nao deu nenhum problema!"  (Ops, Dev)
+"A mais eu uso a minha própria conta e não deu nenhum problema!" (Ops, Dev).
 
-Sim, e provavelmente isso nunca vai ser um problema para voce, mas sera um grande problema para os amiguinhos que ficarem quando voce sair da empresa ou precisar se afastar e por medidas de seguranca desativarem seu usuario. :)
+Sim, e provavelmente isso nunca vai ser um problema para você, mas cera___2 um grande problema para os amiguinhos que ficarem quando você sair da empresa ou precisar se afastar e por medidas de segurança desativarem seu usuário. :)
 
 
-Por padrao esse usuarios de servico seguem o seguinte formato:
+Por padrão esse usuários de serviço seguem o seguinte formato:
 
 `<project_number>@developer.gserviceaccount.com`
 
 
 # Roles
 
-Role nada mais e que um conjunto de permissoes.
+Role nada mais e que um conjunto de permissões.
 
-O primeiro ponto possitivo de usar uma role e ter facilidade em passar as mesmas permissoes para um novo usuario que acabou de entrar na empresa.
+O primeiro ponto positivo de usar uma role e ter facilidade em passar as mesmas permissões para um novo usuário que acabou de entrar na empresa.
 
-Ai voce que esta apenas estudando pode pensar:
+Ai você que esta apenas estudando pode pensar:
 
-"nao vou criar role, nao tem necessidade no meu caso"
+"não vou criar role, não tem necessidade no meu caso”.
 
-Mas voce esta enganado, na GCP voce nao pode anexar permissoes a usuarios. Usuarios podem ter apenas roles anexadas a eles. 
+Mas você esta enganado, na GCP você não pode anexar permissões a usuários. Só apenas roles anexadas a eles. 
 
-As permissoes seguem um padrao de `$servico.$recurso.$verbo`, por exemplo `compute.instances.delete`!
+As permissões seguem um padrão de `$servico.$recurso.$verbo`, por exemplo `compute.instances.delete`!
 
 ![role-permissions](./img/role-permissions.png)
 
@@ -54,23 +54,23 @@ As permissoes seguem um padrao de `$servico.$recurso.$verbo`, por exemplo `compu
 
 ![politica-de-hierarquia](./img/hierarquia.png)
 
-As politicas de hierarquia da GCP sao bem granulares e funcionam de cima pra baixo (nesse desenho pelo menos).
+As politicas de hierarquia da GCP são bem granulares e funcionam de cima pra baixo (nesse desenho pelo menos).
 
-Vamos imaginar o seguinte, Bianca acabou de chegar na empresa e vai fazer parte do projeto `example-dev`. No entanto ela so vai precisar de acesso ao `Compute Engine`, nao precisa se preocupar em saber detalhes mas a titulo de curiosidade sao as VMs na GCP, mas somente para *visualizar*. 
+Vamos imaginar o seguinte, Bianca acabou de chegar na empresa e vai fazer parte do projeto `example-dev`. No entanto ela só vai precisar de acesso ao `Compute Engine`, não precisa se preocupar em saber detalhes mas a titulo de curiosidade são as VMs na GCP, mas somente para *visualizar*. 
 
-Voce como uma pessoa que conhece o principio do menor privilegio vai liberar para ela apenas a *visualizacao* do recurso `Compute Engine`.
+Você como uma pessoa que conhece o principio do menor privilegio vai liberar para ela apenas a *visualização* do recurso `Compute Engine`.
 
-Depois que voce foi pra casa, Bianca percebeu que precisa tambem ter acesso ao `Cloud Storage` para validar algumas coisas.
-Uma pessoa mais desatualizada recebeu essa solicitacao e apos ver que ela ja tinha acesso ao `Compute Engine` resolveu liberar acesso de *Admin* ao projeto.
+Depois que você foi pra casa, Bianca percebeu que precisa também ter acesso ao `Cloud Storage` para validar algumas coisas.
+Uma pessoa mais desatualizada recebeu essa solicitação e apos ver que ela já tinha acesso ao `Compute Engine` resolveu liberar acesso de *Admin* ao projeto.
 
-Liberar esse tipo de acesso ao projeto tem efeito em todos os recursos abaixo, mas... como voce acha que ficariam as permissoes da Bianca no `Compute Engine`?
+Liberar esse tipo de acesso ao projeto tem efeito em todos os recursos abaixo, mas... como você acha que ficariam as permissões da Bianca no `Compute Engine`?
 
 Obviamente ela teria acesso de *Admin* no `App Engine` e `Cloud Storage` mas manteria o de *Viewer* no `Compute Engine` correto?
 
 
 Nope! Quanto mais pra cima for dado um privilegio, toda "raiz" daquele recurso/projeto herdara seu privilegio.
 
-No caso, como a Bianca tem acesso de admin ao projeto, tambem tera o mesmo acesso de *Admin* todos os sub-recursos! 
+No caso, como a Bianca tem acesso de admin ao projeto, também terá o mesmo acesso de *Admin* todos os sub-recursos! 
 
 
 # Links uteis
