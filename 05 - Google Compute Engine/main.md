@@ -41,7 +41,7 @@ Para resolver e bem simples, basta removermos o _ do nome.
 `gcloud compute instances create myinstancevm`
 
 
-!(gloud compute instances create myinstancename)[./img/gcloud-compute-instances-create-vmname-success.png]
+![gloud compute instances create myinstancename](./img/gcloud-compute-instances-create-vmname-success.png)
 
 
 Nossa primeira instancia esta criada, mas ainda existem muitos parametros que precisamos estudar sobre esse comando.
