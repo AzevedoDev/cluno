@@ -86,34 +86,34 @@ gcloud init
 
 e siga o passo a passo.
 
-* De um nome para a configuracao
-* Faca login com sua conta do google
+* De um nome para a configuração
+* Faca login com sua conta do Google
 * Escolha o projeto criado ou crie um novo
 
-E isso, agora voce ja tem seu projeto cadastrado e podemos comecar a utilizar a cli (command line interface) para executar nossos comandos!
+E isso, agora você já tem seu projeto cadastrado e podemos começar a utilizar a cli (command line interface) para executar nossos comandos!
 
 
 
 ### Criando um projeto pela sdk
 
-A primeira dica vai pro comando `man`, muito provavelmetne voce nao conhece os parametros de nenhum comando do gcloud. Entao voce vai precisar bastante do `man`. 
+A primeira dica vai pro comando `man`, muito provavelmente você não conhece os parâmetros de nenhum comando do gcloud. Então você vai precisar bastante do `man`. 
 
 Faca o seguinte digito o comando `man gcloud` e aperta tab. 
-Voce deve estar vendo uma lista gigante de comandos. Mas nos queremos ver comandos relacionados a projetos, entao vamos tentar reduzir essa lista executando `man gcloud_projects` e prescionando tab novamente.
+Você deve estar vendo uma lista gigante de comandos. Mas nos queremos ver comandos relacionados a projetos, então vamos tentar reduzir essa lista executando `man gcloud_projects` e pressionando tab novamente.
 Beleza, agora temos uma lista bem menor...
 
-Voce consegue ate ler as opcoes, e ver que temos uma que e create. 
+Você consegue ate ler as opções, e ver que temos uma que e create. 
 Seguimos com o comando `man gcloud_projects_create`.
-De uma lida em como o comando funciona e todos os parametros.
+De uma lida em como o comando funciona e todos os parâmetros.
 
-Caso voce nao queira ler agora, basta digital `gcloud projects create $id_unico`, trocando $id_unico para o id do seu projeto. 
+Caso você não queira ler agora, basta digital `gcloud projects create $id_unico`, trocando $id_unico para o id do seu projeto. 
 
 ![gcloud projects create](./img/new-project.png)
 
-Nao vamos precisar desse projeto, pois ja criamos o nosso anteriormente.
-Entao vamos aproveitar para aprender a deletar um projeto.
+Não vamos precisar desse projeto, pois já criamos o nosso anteriormente.
+Então vamos aproveitar para aprender a deletar um projeto.
 
-Supondo que a gente nao saiba o id do projeto, nem quais projetos existem podemos simplesmente rodar o comando `gcloud projects list`
+Supondo que a gente não saiba o id do projeto, nem quais projetos existem podemos simplesmente rodar o comando `gcloud projects list`
 
 ![gcloud projects list](./img/gcloud-projects-list.png)
 
@@ -121,19 +121,18 @@ Agora que sabemos os projetos existentes podemos deletar com `gcloud projects de
 
 ![gcloud projects delete](./img/gcloud-projects-delete.png)
 
-Se voce ler com atencao a saida do comando vai aprender mais um novo comando:
+Se você ler com atenção a saída do comando vai aprender mais um novo comando:
 
 `gcloud projects undelete $id_unico`
 
-Por padrao a GCP nao deleta instanteneamente seu projeto, ele joga o projeto em uma especie de quarentena que dura em torno de 30 dias. Quando esse prazo vai chegando ao final, eles enviam um email para voce falando que seu projeto sera deletado em breve.
+Por padrão a GCP não deleta instantaneamente seu projeto, ele joga o projeto em uma espécie de quarentena que dura em torno de 30 dias. Quando esse prazo vai chegando ao final, eles enviam um e-mail para você falando que seu projeto será deletado em breve.
 
-Ate esse dia voce pode desfazer o comando de delete e recuperar o projeto.
+Ate esse dia você pode desfazer o comando de delete e recuperar o projeto.
 
-Vale a pena mencionar que voce recebera um email, assim que mandar deletar o projeto, avisando que foi agendado a delecao do projeto.
+Vale a pena mencionar que você recebera um e-mail, assim que mandar deletar o projeto, avisando que foi agendado a deleção do projeto.
 
 ![email delecao do projeto](./img/delecao-do-projeto.png)
 
 
 # Links uteis
 - https://cloud.google.com/sdk/gcloud/reference/
-
